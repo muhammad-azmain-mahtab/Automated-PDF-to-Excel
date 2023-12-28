@@ -2,12 +2,12 @@
 FRC - convert table PDF to Excel format from Annual Financial Report Documents
 
 ## Kaggle Notebook for initial inference
-https://www.kaggle.com/code/sarwaarr/notebook0c4892e18b
+https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese/edit
 
 ## Data Annotation
-* Convert pdf to images & download by running kaagle code
-* After download, crop specific tables from those images and delete others 
-* Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those table images 
+* Convert pdf to images & download by running code from https://www.kaggle.com/code/sarwaarr/notebook0c4892e18b
+* After download, crop specific tables from those images
+* Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those cropped table images 
   * Correct wrong text/numbers
   * Modify & correct excel
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/ and remove -
