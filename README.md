@@ -2,7 +2,7 @@
 Convert table PDF to Excel format from Annual Financial Report Documents using Machine Learning
 
 ## Kaggle Notebook for initial inference
-https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese/edit
+https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 
 ## Data Annotation
 * Convert pdf to images & download by running code from https://www.kaggle.com/code/sarwaarr/notebook0c4892e18b
