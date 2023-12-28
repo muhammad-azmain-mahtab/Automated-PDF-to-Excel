@@ -21,10 +21,11 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 
 ## How to install PPOCRLabelv2
 * Download and install <code>Ancaonda</code> https://www.anaconda.com/download
-* conda env remove --name paddle_env
-* conda create -n paddle_env python=3.10
-* activate paddle_env
-* python -m pip install paddlepaddle==2.5.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
-* pip install PPOCRLabel
-* pip install pywin32
-* PPOCRLabel
+* Run <code>Ancaonda Prompt</code> and use the following commands
+  * conda env remove --name paddle_env
+  * conda create -n paddle_env python=3.10
+  * activate paddle_env
+  * python -m pip install paddlepaddle==2.5.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+  * pip install PPOCRLabel
+  * pip install pywin32
+  * PPOCRLabel
