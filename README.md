@@ -36,5 +36,5 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * Remove <code>class="tableizer-table"</code>
   * Remove <code>class="tableizer-firstrow"</code>
 * Replace in the annotation file <code>gt.txt</code> -
-  * <code>"structure":</code> / <code>"tokens":</code> with html stucture only
+  * <code>"structure":</code> / <code>"tokens":</code> with html stucture extracted from the html code using <code>[extract_html_stucture_gui.py](https://github.com/AzmainO7/FRC-ML-Project-01/blob/main/extract_html_stucture_gui.py)</code>
   * <code>"gt":</code> with the html code
