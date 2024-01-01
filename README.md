@@ -1,4 +1,3 @@
-# FRC-ML-Project-01
 Convert table PDF to Excel format from Annual Financial Report Documents using Machine Learning
 
 ## Kaggle Notebook for initial inference
