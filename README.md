@@ -5,8 +5,8 @@ Convert table PDF to Excel format from Annual Financial Report Documents using M
 https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 pdf_to_image_gui.py
 ## Data Annotation
-* Convert pdf to images & download by running code from <code>[pdf_to_image_gui.py](https://github.com/AzmainO7/FRC-ML-Project-01/blob/main/pdf_to_image_gui.py)</code>
-* After download, crop specific tables from those images
+* Convert pdf to images using <code>[pdf_to_image_gui.py](https://github.com/AzmainO7/FRC-ML-Project-01/blob/main/pdf_to_image_gui.py)</code>
+* After conversion, crop specific tables from those images
 * Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those cropped table images
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
   * Correct wrong text/numbers
