@@ -17,11 +17,12 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * PPOCRLabel
 
 ## Prepare Table Data for Annotation
- * Convert pdf to images using <code>[pdf_to_image_gui.py](https://github.com/AzmainO7/FRC-ML-Project-01/blob/main/pdf_to_image_gui.py)</code>
-   * Run <code>Anaconda Prompt</code>
-   * Copy & paste <code>activate paddle_env && python "...\pdf_to_image_gui.py"</code>, replace "...\pdf_to_image_gui.py" with the actual path where <code>pdf_to_image_gui.py</code> is stored in your device
-   * In the opened window select PDF folder and press convert
-   * Once completed "Conversion completed" message will be shown below
+* PDF name format - <code>tradingcode-year.pdf</code>
+* Convert pdf to images using <code>[pdf_to_image_gui.py](https://github.com/AzmainO7/FRC-ML-Project-01/blob/main/pdf_to_image_gui.py)</code>
+  * Run <code>Anaconda Prompt</code>
+  * Copy & paste <code>activate paddle_env && python "...\pdf_to_image_gui.py"</code>, replace "...\pdf_to_image_gui.py" with the actual path where <code>pdf_to_image_gui.py</code> is stored in your device
+  * In the opened window select PDF folder and press convert
+  * Once completed "Conversion completed" message will be shown below
 * After conversion, crop specific tables from those images
   
 ## Data Annotation
