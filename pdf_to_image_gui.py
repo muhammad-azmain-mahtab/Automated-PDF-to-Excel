@@ -27,7 +27,7 @@ def convert_pdfs_to_images(pdf_folder, output_folder, dpi):
                 img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
 
                 # Save the image with specified DPI
-                image_filename = f"page_{page_num + 1}.png"
+                image_filename = f"{os.path.splitext(pdf_file)[0]}-{page_num + 1}.png"
                 image_path = os.path.join(pdf_output_folder, image_filename)
                 img.save(image_path, dpi=(dpi, dpi))
 
