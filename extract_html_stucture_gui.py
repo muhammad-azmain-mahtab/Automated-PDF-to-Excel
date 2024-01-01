@@ -34,8 +34,7 @@ def extract_and_display_tags():
     html_tags = extract_tags(html_content)
     
     result_text.delete(1.0, tk.END)
-    for tag in html_tags:
-        result_text.insert(tk.END, tag + '\n')
+    result_text.insert(tk.END, str(html_tags).replace("'", '"'))
 
 # Create the main window
 root = tk.Tk()
