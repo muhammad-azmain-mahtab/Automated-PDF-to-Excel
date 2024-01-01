@@ -12,7 +12,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * Correct wrong text/numbers
   * Modify & correct excel
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/ and remove -
-  * css
+  * Tick <code>no css</code> button
   * <code>class="tableizer-table"</code>
   * <code>class="tableizer-firstrow"</code>
 * Replace in the annotation file <code>gt.txt</code> -
