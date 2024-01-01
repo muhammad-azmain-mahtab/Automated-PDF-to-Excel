@@ -11,7 +11,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
   * Correct wrong text/numbers
   * Modify & correct excel
-* Get Html for the modified Excel table using https://tableizer.journalistopia.com/ and -
+* Get Html for the modified Excel table using https://tableizer.journalistopia.com/
   * Tick <code>no css</code> button
   * Remove <code>class="tableizer-table"</code>
   * Remove <code>class="tableizer-firstrow"</code>
