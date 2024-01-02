@@ -18,6 +18,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 
 ## Prepare Table Data for Annotation
 * PDF name format - <code>tradingcode-year.pdf</code>
+* Create a folder and add it to windows defender exclusion list
 * Convert pdf to images using <code>[pdf_to_image_gui.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/pdf_to_image_gui.exe)</code>
   <!-- * Run <code>Anaconda Prompt</code>
   * Copy & paste <code>activate paddle_env && python "...\pdf_to_image_gui.py"</code>, replace "...\pdf_to_image_gui.py" with the actual path where <code>pdf_to_image_gui.py</code> is stored in your device -->
