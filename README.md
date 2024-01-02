@@ -19,8 +19,8 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 ## Prepare Table Data for Annotation
 * PDF name format - <code>tradingcode-year.pdf</code>
 * Convert pdf to images using <code>[pdf_to_image_gui.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/pdf_to_image_gui.exe)</code>
-  * Run <code>Anaconda Prompt</code>
-  * Copy & paste <code>activate paddle_env && python "...\pdf_to_image_gui.py"</code>, replace "...\pdf_to_image_gui.py" with the actual path where <code>pdf_to_image_gui.py</code> is stored in your device
+  <!-- * Run <code>Anaconda Prompt</code>
+  * Copy & paste <code>activate paddle_env && python "...\pdf_to_image_gui.py"</code>, replace "...\pdf_to_image_gui.py" with the actual path where <code>pdf_to_image_gui.py</code> is stored in your device -->
   * In the opened window select PDF folder and press convert
   * Once completed "Conversion completed" message will be shown below
 * After conversion, crop specific tables from those images
