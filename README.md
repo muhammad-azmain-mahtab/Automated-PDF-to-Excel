@@ -34,6 +34,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * After opening a table picture, click on the <code>Table Recognition</code> button in the upper right corner of PPOCRLabel, which will call the table recognition model in PP-Structure to automatically label the table and pop up Excel at the same time.
   * Save and close Excel after making adjustments and correcting errors
   * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side
+  * Adjust cell order: Drag all the results under the <code>Recognition Results</code> column on the right side of the software interface to make the box numbers are arranged from left to right, top to bottom
   * Go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/
   * Tick <code>no css</code> button
