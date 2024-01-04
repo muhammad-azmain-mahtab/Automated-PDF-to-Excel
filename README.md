@@ -30,9 +30,9 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 * Ensure Microsoft Excel is installed on your system
 * Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those cropped table images
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
-  * Correct wrong text/numbers
-  * Modify & correct excel
-  * Close excel after mopdifying
+  * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side
+  * Modify excel
+  * Save & close excel after modifying
   * Go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/
   * Tick <code>no css</code> button
