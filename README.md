@@ -35,7 +35,8 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * Save and close Excel after making adjustments and correcting errors
   * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side
   * Adjust cell order: Drag all the results under the <code>Recognition Results</code> column on the right side of the software interface to make the box numbers are arranged from left to right, top to bottom
-  * Go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
+  * Finally click on <code>Check</code> button on the bottom right and move on to another table image
+  * Once all the images are done and checked, go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/
   * Tick <code>no css</code> button
   * Remove <code>class="tableizer-table"</code>
