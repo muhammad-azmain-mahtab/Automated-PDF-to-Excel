@@ -30,6 +30,8 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 * Ensure Microsoft Excel is installed on your system
 * Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those cropped table images
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
+  * Go to the top left <code>File</code> section and click <code>Open Dir</code> to open the folder where the cropped images are stored
+  * After opening the table picture, click on the Table Recognition button in the upper right corner of PPOCRLabel, which will call the table recognition model in PP-Structure to automatically label the table and pop up Excel at the same time.
   * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side
   * Click on the <code>Table Recognition</code> button to start editing the Excel file
   * Save & close Excel after modifying
