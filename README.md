@@ -32,6 +32,8 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
   * Correct wrong text/numbers
   * Modify & correct excel
+  * Close excel after mopdifying
+  * Go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
 * Get Html for the modified Excel table using https://tableizer.journalistopia.com/
   * Tick <code>no css</code> button
   * Remove <code>class="tableizer-table"</code>
