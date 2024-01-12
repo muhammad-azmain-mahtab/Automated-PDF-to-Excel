@@ -17,6 +17,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * PPOCRLabel
 
 ## Prepare Table Data for Annotation
+>Grayscale color mode recommended and set as default for better table recognization.
 * PDF name format - <code>tradingcode-year.pdf</code>
 * Create a folder and add it to windows defender exclusion list
 * Convert pdf to images using <code>[pdf_to_image_gui.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/pdf_to_image_gui.exe)</code>
