@@ -38,15 +38,10 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
     * Press <code>Process Excel to HTML</code> to generate HTML for Excel files in the folder
     * Now go back to <code>PPOCRLabelv2</code> and complete the rest of the steps
   * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side (this step is important for correcting wrong text/numbers in detection)
-  * If there are blank cells in the table, you also need to mark them with a bounding box (rectangle box) so that the total number of cells in the generated html is the same as the rectboxes/bounding boxes in the image (opening the generated html and PPOCRLabel side by side is recommended to minimize errors) 
+  * If there are blank cells in the table, you also need to mark them with a bounding box (rectangle box) so that the total number of <code>cells</code> in the generated html is the same as the number of <code>rectboxes/bounding boxes</code> in the image (opening the generated html and PPOCRLabel side by side is recommended to minimize errors) 
   * Adjust cell order: Drag all the results under the <code>Recognition Results</code> column on the right side of the software interface to make the box numbers are arranged from left to right, top to bottom
   * Finally click on <code>Check</code> button on the bottom right and move on to another table image
   * Once all the images are done and checked, go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
-* Get Html for the modified Excel table using https://tableizer.journalistopia.com/
-  * Tick <code>no css</code> button
-  * Remove <code>class="tableizer-table"</code>
-  * Remove <code>class="tableizer-firstrow"</code>
-* Replace in the annotation file <code>gt.txt</code> -
-  * <code>"gt":</code> with the html code
-  * <code>"structure":</code> / <code>"tokens":</code> with html stucture extracted from the html code using <code>[extract_html_stucture_gui.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/extract_html_stucture_gui.exe)</code>
+  * Open <code>[Data_Processing.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/Data_Processing.exe)</code> again -
+    * Click <code>Generate gt.jsonl</code> button to generate the final output <code>gt.jsonl</code> file
 
