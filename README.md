@@ -32,9 +32,13 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
   * Go to the top left <code>File</code> section and click <code>Open Dir</code> to open the folder where the cropped images are stored
   * After opening a table picture, click on the <code>Table Recognition</code> button in the upper right corner of PPOCRLabel, which will call the table recognition model in PP-Structure to automatically label the table and pop up Excel at the same time.
-  * Save and close Excel after making adjustments and correcting errors
-  * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side
-  * If there are blank cells in the table, you also need to mark them with a bounding box (rectangle box) so that the total number of cells is the same as in the image
+  * Save and close Excel after filling cells with content appropriately, no need to correct text/number errors as it is only needed for the generating the stucture not the content within
+  * Open <code>[Data_Processing.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/Data_Processing.exe)</code> -
+    * Select the folder containing the PDF image files
+    * Press <code>Process Excel to HTML</code> to generate HTML for Excel files in the folder
+    * Now go back to <code>PPOCRLabelv2</code> and complete the rest of the steps
+  * Correct wrong text/numbers on the <code>Recognition Results</code> section on the right side (this step is important for correcting wrong text/numbers in detection)
+  * If there are blank cells in the table, you also need to mark them with a bounding box (rectangle box) so that the total number of cells in the generated html is the same as the rectboxes/bounding boxes in the image (opening the generated html and PPOCRLabel side by side is recommended to minimize errors) 
   * Adjust cell order: Drag all the results under the <code>Recognition Results</code> column on the right side of the software interface to make the box numbers are arranged from left to right, top to bottom
   * Finally click on <code>Check</code> button on the bottom right and move on to another table image
   * Once all the images are done and checked, go to the top left <code>File</code> section and click <code>Export Table Label</code> which will generate the <code>gt.txt</code> file
