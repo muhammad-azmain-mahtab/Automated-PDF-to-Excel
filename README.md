@@ -27,7 +27,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
 * After conversion, crop specific tables from those images
   
 ## Data Annotation
->It is suggested to first modify and save Excels for all the images in the folder first then use Data_Processing.exe to create HTMLs for all of them at once.
+>It is a must to create html for excel files using Data_Processing.exe again if the excel file has been modified.
 * Ensure Microsoft Excel is installed on your system
 * Use <code>PPOCRLabelv2</code> labeling tool to generate annotations for those cropped table images
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
