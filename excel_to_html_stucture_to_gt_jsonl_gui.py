@@ -3,8 +3,7 @@ import json
 import pandas as pd
 import re
 import glob
-from tkinter import Tk, filedialog, Button, Label, Text, CENTER, DISABLED, NORMAL, END
-from tkinter import ttk
+from tkinter import Tk, filedialog, Button, Label, Text, CENTER, DISABLED, NORMAL, END, ttk, font
 
 def format_html(html):
     formatted_html = ""
@@ -128,6 +127,44 @@ def process_gt_file(root_folder, print_message):
             f.write('\n')
 
     # print_message("HTML Stucture Token added to gt_final.jsonl.")
+            
+def check_counts(json_data):
+    bbox_count = len(json_data["html"]["cells"])
+    th_count = json_data["html"]["structure"]["tokens"].count("<th>")
+    td_count = json_data["html"]["structure"]["tokens"].count("<td>")
+    return bbox_count, th_count, td_count
+
+def check_counts_in_file(file_path, text_output):
+    correct_count = 0
+    error_count = 0
+
+    with open(file_path, "r") as file:
+        for line in file:
+            json_data = json.loads(line)
+            bbox_count, th_count, td_count = check_counts(json_data)
+            if bbox_count != th_count + td_count:
+                message = f"Error: Box count ({bbox_count}) does not match Cell count ({th_count + td_count}) for {json_data['filename']}"
+                text_output_insert(text_output, message)
+                error_count += 1
+            else:
+                correct_count += 1
+
+    message = f"\nCorrect count: {correct_count}\nError count: {error_count}\n"
+    text_output_insert(text_output, message)
+
+def text_output_insert(text_output, message):
+    text_output.config(state=NORMAL)
+    text_output.insert(END, message + "\n")
+    text_output.see(END)
+    text_output.config(state=DISABLED)
+
+def choose_file_and_check_counts(text_output):
+    file_path = filedialog.askopenfilename(title="Choose a gt.jsonl file")
+    if file_path:
+        text_output_insert(text_output, "========================================================================")
+        text_output_insert(text_output, f"Selected File: {file_path}")
+        text_output_insert(text_output, "========================================================================")
+        check_counts_in_file(file_path, text_output)
 
 def display_messages(print_message):
     print_message("HTML Stucture Token added to gt_final.jsonl.")
@@ -155,13 +192,14 @@ def create_gui():
         text_output.insert(END, message + "\n")
         text_output.see(END)
         text_output.config(state=DISABLED)
+        
 
     root = Tk()
     root.title("Data Processing GUI")
 
     # Center window and set size
     window_width = 600
-    window_height = 400
+    window_height = 500
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
 
@@ -172,7 +210,7 @@ def create_gui():
 
     # Style configuration
     style = ttk.Style()
-    style.configure("TButton", padding=6, relief="flat", highlightcolor="#52aed9", background="#ccc")
+    style.configure("TButton", padding=6, relief="flat", highlightcolor="#52aed9", background="#eee")
     style.configure("TLabel", padding=6, background="#52aed9")
     style.configure("TFrame", padding=6, background="#eee")
 
@@ -185,11 +223,17 @@ def create_gui():
     process_button = ttk.Button(root, text="Process Excel to HTML", command=process_folder, state=DISABLED, style="TButton")
     process_button.pack(pady=10)
 
-    generate_gt_button = ttk.Button(root, text="Generate gt.jsonl", command=generate_gt_file, state=DISABLED, style="TButton")
-    generate_gt_button.pack(pady=10)
+    generate_gt_button = ttk.Button(root, text="Generate 'gt_final.jsonl'", command=generate_gt_file, state=DISABLED, style="TButton")
+    generate_gt_button.pack(pady=5)
 
-    text_output = Text(root, height=10, width=60, state=DISABLED)
-    text_output.pack(pady=10)
+    style.configure("Colored.TButton", foreground="#52aed9", background="#eee")
+    
+    check_counts_button = ttk.Button(root, text="Check Box-Cell count in 'gt_final.jsonl'", command=lambda: choose_file_and_check_counts(text_output), style="Colored.TButton")
+    check_counts_button.pack(pady=5)
+
+    custom_font = font.Font(family="Arial", size=10)
+    text_output = Text(root, height=50, width=80, state=DISABLED, font=custom_font, padx=10, pady=10)
+    text_output.pack(fill="both", expand=True)
 
     root.mainloop()
 
