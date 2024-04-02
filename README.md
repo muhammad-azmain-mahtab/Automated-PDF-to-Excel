@@ -34,7 +34,7 @@ https://www.kaggle.com/mdazmainmahtab/ppocr-inference-chinese
   * <code>activate paddle_env && PPOCRLabel</code> use this command on anaconda prompt to run PPOCRLabelv2
   * Go to the top left <code>File</code> section and click <code>Open Dir</code> to open the folder where the cropped images are stored
   * After opening a table picture, click on the <code>Table Recognition</code> button in the upper right corner of PPOCRLabel, which will call the table recognition model in PP-Structure to automatically label the table and pop up Excel at the same time.
-  * Save and close Excel after filling cells with content appropriately, no need to correct text/number errors as it is only needed for the generating the stucture not the content within
+  * Save and close Excel after filling cells with content appropriately, no need to correct text/number errors as it is only needed for generating the structure not the content within
   * Open <code>[Data_Processing.exe](https://github.com/AzmainO7/FRC-ML-Project-01/releases/download/Preview/Data_Processing.exe)</code> -
     * Select the folder containing the PDF image files
     * Press <code>Process Excel to HTML</code> to generate HTML for Excel files in the folder
